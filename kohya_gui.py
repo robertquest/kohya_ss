@@ -130,7 +130,7 @@ if __name__ == '__main__':
         '--headless', action='store_true', help='Is the server headless'
     )
     parser.add_argument(
-        '--language', type=str, default=None, help='Set custom language'
+        '--language', type=str, default=None, help='Set custom language. Default is None'
     )
 
     args = parser.parse_args()
