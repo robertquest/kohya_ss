@@ -1,6 +1,10 @@
 import os
 import gradio as gr
 import localization
+from library.custom_logging import setup_logging
+
+# Set up logging
+log = setup_logging()
 
 
 def file_path(fn):
@@ -16,7 +20,7 @@ def js_html_str(language):
 
 def add_javascript(language):
     if language is None:
-        print('no language')
+        log.info('no language specified, defaulting to english...')
         return
     jsStr = js_html_str(language)
 
